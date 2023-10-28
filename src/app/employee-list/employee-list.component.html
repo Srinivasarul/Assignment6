@@ -1,0 +1,21 @@
+<H1>Employees</H1>
+<table class="table table-bordered">
+    <thead class="table-bordered table-dark">
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody defColOnEvent  *ngFor="let i of emplist">
+        <td>{{i.employeeID}}</td>
+        <td>{{i.firstName}}</td>
+        <td>{{i.lastName}}</td>
+        <td>{{i.salary | currency }} </td>
+        <td>{{i.DOB | date : 'mediumDate'| uppercase }}</td>
+        <td>{{i.email}}</td>
+    </tbody>
+  </table>
